@@ -105,7 +105,7 @@ def test_sqrt():
     :return: статус прохождения теста
     """
     a = np.random.randint(0,100)
-    assert a - math.sqrt(a)**2 < 1.0e-14
+    assert a - math.sqrt(a)**2 < 1.0e-10
 
 def test_pow():
     """
@@ -125,26 +125,9 @@ def test_hypot():
     x = np.random.random(1) * 10000 * np.random.choice([-1, 1])
     y = np.random.random(1) * 10000 * np.random.choice([-1, 1])
     z = math.hypot(x,y)
-    assert abs(math.sqrt(x**2 + y**2) - z) <  1.0e-14
+    assert abs(math.sqrt(x**2 + y**2) - z) <  1.0e-10
 
 
 if __name__ == "__main__":
 
     print(str(type(filter(func_for_filter, [])))=="<class 'filter'>")
-    rev_p = np.random.choice([False, True])
-    print(rev_p, type(rev_p))
-    p = math.pi
-    print(p)
-    print(math.sqrt(48))
-    print(48 - math.sqrt(48)**2 < 1.0e-14)
-    print(np.random.random(1))
-
-    base = np.random.random(1)*10000
-    exp = -1
-    a = math.pow(base, exp)
-    print(abs(a - 1/base)< 1.0e-14)
-
-    x = np.random.random(1) * 10000 * np.random.choice([-1, 1])
-    y = np.random.random(1) * 10000 * np.random.choice([-1, 1])
-    z = math.hypot(x,y)
-    print(abs(math.sqrt(x**2 + y**2) - z))
