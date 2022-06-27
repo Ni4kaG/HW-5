@@ -1,5 +1,5 @@
-def refill():
-    refill_sum = input('Введите сумму поступления: ')
+def refill(refill_sum):
+
     if refill_sum.isdigit():
         return (int(refill_sum))
     else:
@@ -36,7 +36,8 @@ def pers_account():
 
         choice = input('Выберите пункт меню: ')
         if choice == '1':
-            account_sum += refill()
+ #           refill_sum = input('Введите сумму поступления: ')
+            account_sum += refill(input('Введите сумму поступления: '))
         elif choice == '2':
             purchase = purchases(account_sum)
             account_sum -= purchase[1]
@@ -114,4 +115,3 @@ def victory():
         answer = input("Хотите начать игру заново (y/n): ")
         if answer != 'y':
             to_repeat = False
-
