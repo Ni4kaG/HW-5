@@ -18,7 +18,7 @@ def test_for_refill():
 
 def test_sys_platform():
     """
-    проверка функции поплнения счета
+    проверка функции test_sys_platform
     :return: результат проверки
 
     """
@@ -27,7 +27,7 @@ def test_sys_platform():
 
 def test_sys_copyright():
     """
-    проверка функции поплнения счета
+    проверка функции test_sys_copyright
     :return: результат проверки
 
     """
