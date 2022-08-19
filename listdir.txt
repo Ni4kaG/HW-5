@@ -1,2 +1,2 @@
-Files: cons_file_manager.py, purchase_pickle.data, LICENSE, test_python.py, acc_pickle.data, README.md, test_filemanager.py, listdir.txt, Pers_acc_to_file.py, 
-Dirs: Lesson5modules, .git, .idea, 
+Files: cons_file_manager.py, purchase_pickle.data, LICENSE, test_python.py, acc_pickle.data, README.md, log.txt, test_filemanager.py, listdir.txt, Pers_acc_to_file.py, 
+Dirs: Lesson5modules, my_new_dir, .git, .idea, 
