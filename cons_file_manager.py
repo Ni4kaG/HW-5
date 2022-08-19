@@ -3,9 +3,14 @@ import random
 import os
 import sys
 import shutil
+
+import pickle
+
+
 # 2. наши модули
 from Lesson5modules.my_function_prev_lessons import *
 
+FILE_NAME = 'listdir.txt'
 
 
 while True:
@@ -36,7 +41,18 @@ while True:
         shutil.copy('my_function_prev_lessons.py', 'my_function_prev_lessons_copy.py')
     elif choice == '4':
 # просмотр содержимого рабочей директории
-        print(os.listdir())
+        f = open(FILE_NAME,'w')
+        f.write('Files: ')
+        content = os.listdir()
+        for file in content:
+            if os.path.isfile(file):
+                f.write(file + ', ')
+        f.write('\n' + 'Dirs: ')
+        content = os.listdir()
+        for file in content:
+            if not os.path.isfile(file):
+                f.write(file + ', ')
+        f.close()
     elif choice == '5':
 # ппосмотреть только папки
         content = os.listdir()
